@@ -23,6 +23,12 @@ namespace QSV2FLV
             //backgroundWorker1.RunWorkerCompleted += backgroundWorker1_RunWorkerCompleted;
             listView.Items.Clear();
             tbxOutput.Text = @"D:\Output";
+            
+            if (!Directory.Exists(tbxOutput.Text)) {
+
+                Directory.CreateDirectory(tbxOutput.Text);
+            }
+            
             output = tbxOutput.Text;
         }
 
